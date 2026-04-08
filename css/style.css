@@ -67,6 +67,13 @@ body{
     background-color: #28735a;
     color:white; 
 }
+/*Hamburger*/
+.menu-toggle{
+    display: none;
+    font-style: 28px;
+    cursor: pointer;
+    margin-left: auto;
+}
 /*HERO SECTION*/
 .hero{
     padding: 120px 0 100px;
@@ -161,4 +168,52 @@ body{
     max-width: 520px;
     flex:1;
     max-width: 600px;
+}
+/*=======================*/
+/*Responsive Hero (tablet&Mobile)*/
+/*=======================*/
+@media (max-width:768px){
+    /* Hide desktop menu */
+    .nav{
+        display:none;
+    }
+    /* Hide desktop menu */
+    .menu-toggle{
+        display: block;
+        margin-left: auto;
+        font-size: 26px;
+        cursor: pointer;
+
+        margin-left: 10px;
+    }
+        /* Header */
+    .header-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .header-btn a{
+        padding: 8px 16px;
+        font-size: 14px;
+        }
+        
+    /* Hero layout */
+    .hero-container{
+        flex-direction:column;
+        text-align: center;
+    }
+    .hero-buttons{
+        flex-direction: column;
+        text-align: center;
+}
+    .hero-text h1{
+        font-size: 32px;
+    }
+    .hero-image{
+        justify-content: center;
+        margin-top: 30px;
+    }
+    .hero{
+        padding: 80px 0 60px;
+    }
 }
