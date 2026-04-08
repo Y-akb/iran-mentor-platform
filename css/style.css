@@ -72,7 +72,6 @@ body{
     display: none;
     font-style: 28px;
     cursor: pointer;
-    margin-left: auto;
 }
 /*HERO SECTION*/
 .hero{
@@ -154,6 +153,9 @@ body{
     margin-top: 10px;
 }
 /* Hero Typography */
+.hero-text{
+    flex: 1;
+}
 .hero-text h1{
     font-size: 44px;
     font-weight: 700;
@@ -166,8 +168,6 @@ body{
     color:#4b5563;
     margin-bottom: 30px;
     max-width: 520px;
-    flex:1;
-    max-width: 600px;
 }
 /*=======================*/
 /*Responsive Hero (tablet&Mobile)*/
@@ -177,13 +177,11 @@ body{
     .nav{
         display:none;
     }
-    /* Hide desktop menu */
+    /* Show desktop menu */
     .menu-toggle{
         display: block;
-        margin-left: auto;
         font-size: 26px;
         cursor: pointer;
-
         margin-left: 10px;
     }
         /* Header */
@@ -215,5 +213,24 @@ body{
     }
     .hero{
         padding: 80px 0 60px;
+    }
+    .nav.active{
+        display:block;
+        position:absolute;
+        top:72px;
+        left:0;
+
+        width:100%;
+    background: rgba(255,255,255,0.50);
+    backdrop-filter: blur(6px);
+
+        border-bottom: 1px solid #e5e7eb;
+        box-shadow:0 8px 20px rgba(0,0,0,0,08);
+        z-index: 1000;
+    }
+    .nav-list{
+        flex-direction: column;
+        padding: 24px;
+        gap:16px;
     }
 }
